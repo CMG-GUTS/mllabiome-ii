@@ -4,7 +4,8 @@ import { useState, useEffect, useRef, DragEvent, KeyboardEvent } from 'react'
 import Link from 'next/link'
 import styles from './inference.module.css'
 import ThemeToggle from '../../components/ThemeToggle'
-import { API_URL } from '@/lib/config'
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
 
 interface Model {
   model_id: string
