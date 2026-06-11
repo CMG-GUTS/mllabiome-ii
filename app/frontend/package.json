@@ -1,0 +1,30 @@
+{
+  "name": "mllabiome-ii-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "preinstall": "node -e \"const fs=require('fs'); for (const p of ['.next','node_modules/.bin/next']) { try { fs.rmSync(p,{recursive:true,force:true}); } catch(e) {} }\"",
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start",
+    "lint": "node ./node_modules/next/dist/bin/next lint",
+    "clean": "rm -rf .next node_modules",
+    "reinstall": "rm -rf .next node_modules package-lock.json && npm install"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.3.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=20 <26"
+  }
+}

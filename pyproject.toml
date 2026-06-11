@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mllabiome-ii"
+version = "0.1.0"
+description = "mllabiome-ii interactive inference app for machine learning microbiota ensembles"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-multipart>=0.0.6",
+    "numpy>=1.24.0",
+    "pandas>=1.5.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.8.0,<1.9.0",
+    "joblib>=1.2.0",
+    "lightgbm>=4.0.0",
+    "catboost>=1.2.0",
+    "xgboost>=2.0.0",
+    "flaml>=2.3.0",
+    "shap>=0.51.0,<0.52.0",
+    "lime>=0.2.0.1",
+    "httpx>=0.25.0",
+    "matplotlib>=3.7.0",
+]
+
+[project.optional-dependencies]
+export = [
+    "polars>=0.20.0",
+]
+
+[tool.setuptools]
+packages = [
+    "app",
+    "app.backend",
+    "app.backend.api",
+    "app.backend.services",
+]
+
+[tool.setuptools.package-data]
+"app.backend" = [
+    "production_models/README.md",
+    "test_ibs_sample.tsv",
+]
+
+[project.scripts]
+mllabiome-ii-backend = "app.run_backend:main"
