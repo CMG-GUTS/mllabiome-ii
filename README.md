@@ -1,4 +1,5 @@
 <img src="assets/favicon.svg" width="80" height="80" alt="mllabiome-ii icon">
+<img width="1494" height="1195" alt="image" src="https://github.com/user-attachments/assets/d2b8de29-6ac9-4caf-b2bb-f2f870bf8039" />
 
 Interactive local inference app for developed and trained microbiota models.
 
